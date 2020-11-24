@@ -1,10 +1,11 @@
 def tempsEnDate(temps):
     année = 1970+temps[0]//365
-    jour = temps[0]%365
+    jour = temps[0] % 365
     heure = temps[1]
     minute = temps[2]
     seconde = temps[3]
-    return (année,jour,heure,minute,seconde)
+    return (année, jour, heure, minute, seconde)
+
 
 def pluriel(mot):
     """Renvoie la forme plurielle d'un mot càd rajoute un s"""
@@ -13,9 +14,9 @@ def pluriel(mot):
 def secondeEnTemps(seconde):
     """Renvoie le temps (jour, heure, minute, seconde) qui correspond au nombre de seconde passé en argument"""
     j = seconde//(24*3600)
-    h = (seconde%(3600*24))//3600
-    m = (seconde%(3600*24))%3600//60
-    s = ((seconde%(3600*24))%3600)%60
+    h = (seconde %(3600*24))//3600
+    m = (seconde%(3600*24)) % 3600//60
+    s = ((seconde%(3600*24)) % 3600) % 60
     return (j,h,m,s)
 
 def afficheTemps(temps):
