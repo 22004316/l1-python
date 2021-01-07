@@ -22,3 +22,4 @@ canvas.create_oval(x2 - 50, 400, x2 + 50, 500)
 canvas.grid()
 root.mainloop()
 
+
