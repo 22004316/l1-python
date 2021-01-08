@@ -20,10 +20,16 @@ def ecran_aleatoire() :
             color = get_color(r,g,b)
             draw_pixel(i ,j, color )
          
+def degrade_gris() :
+    for i in range(256):
+        for j in range(256):
+            draw_pixel(i, j, )
+        canvas.create_line(i, i, i,256-i, fill = "black")
+        draw_pixel
 
 root = tk.Tk()
 button_alea = tk.Button(root, text = "Aléatoire", font = ("arial", "10"), command = ecran_aleatoire)
-button_degrade = tk.Button(root, text = "Dégradé gris", font = ("arial", "10"))
+button_degrade = tk.Button(root, text = "Dégradé gris", font = ("arial", "10"), command = degrade_gris)
 button_2d = tk.Button(root, text = "Dgradé 2D", font = ("arial", "10"))
 canvas = tk.Canvas(root, width = 256, height = 256, bg = "black")
 
