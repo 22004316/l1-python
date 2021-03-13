@@ -19,13 +19,20 @@ def ecran_aleatoire() :
             b = random.randint(0,255)
             color = get_color(r,g,b)
             draw_pixel(i ,j, color )
-         
-def degrade_gris() :
+
+def degrade_gris():
     for i in range(256):
+        color = get_color(i, i, i)
         for j in range(256):
-            draw_pixel(i, j, )
-        canvas.create_line(i, i, i,256-i, fill = "black")
-        draw_pixel
+            draw_pixel(i, j, color)         
+
+
+#def degrade_gris() :
+    #for i in range(256):
+    #    for j in range(256):
+    #        draw_pixel(i, j, )
+    #    canvas.create_line(i, i, i,256-i, fill = "black")
+     #   draw_pixel
 
 root = tk.Tk()
 button_alea = tk.Button(root, text = "Aléatoire", font = ("arial", "10"), command = ecran_aleatoire)
@@ -39,3 +46,17 @@ button_2d.grid(column = 0, row = 5, padx = 10)
 canvas.grid(column = 1, row = 0,rowspan = 7 )
 
 root.mainloop()
+
+
+
+#définition des fonctions:
+
+
+
+
+def degrade_2D():
+    for i in range(WIDTH):
+        for j in range(HEIGHT):
+            color = get_color(i, 0, j)
+            draw_pixel(i, j, color)
+
