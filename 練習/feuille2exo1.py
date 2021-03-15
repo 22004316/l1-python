@@ -7,7 +7,7 @@ root = tk.Tk()
 
 
 def creer_balle():
-    '''creer une balle '''
+    '''creer une balle muni d'une direction de mouvement aléatoire'''
     circle = c.create_oval((300-20, 200-20), (300+20, 200+20), fill='blue')
     x = rd.randint(1, 7)
     y = rd.randint(1, 7)
@@ -19,7 +19,7 @@ def mouvement(b):
      selon les valeurs de la liste balle'''
     global id_after
     c.move(b[0], b[1], b[2])
-    rebond1(b)
+    rebond2(b)
     id_after = c.after(30, lambda: mouvement(b))
 
 
@@ -45,6 +45,7 @@ def rebond1(balle):
 
 
 def rebond2(b):
+    '''la balle reapparait en haut ou à gauche'''
     x0, y0, x1, y1 = c.coords(b[0])
     if y1 >= 400:
         c.move(b[0], 0, -400)
