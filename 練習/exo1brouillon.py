@@ -47,9 +47,9 @@ def rebond1(balle):
 def rebond2(b):
     x0, y0, x1, y1 = c.coords(b[0])
     if y1 >= 400:
-        c.coords(b[0], x0, 0, x1, y0+40)
+        c.move(b[0], 0, -400)
     if x1 >= 600:
-        c.coords(b[0], 0, y0, x0+40, y1)
+        c.move(b[0], -600, 0)
               
 
 c = tk.Canvas(root, height=400, width=600, bg='black')
