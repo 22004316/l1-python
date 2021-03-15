@@ -17,8 +17,7 @@ def inside_square(x, y):
 
 
 def change_size(event):
-    global cote
-    global pause
+    global cote, pause
     if not pause:
         if inside_square(event.x, event.y) and cote >= 20:
             cote -= 10
